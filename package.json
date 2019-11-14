@@ -1,0 +1,19 @@
+{
+    "name": "automate",
+    "version": "1.0.0",
+    "description": "Automating My Facebook Group",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest --detectOpenHandles",
+        "start": "node index.js"
+    },
+    "author": "Naseem",
+    "license": "ISC",
+    "devDependencies": {},
+    "dependencies": {
+        "chromedriver": "^78.0.1",
+        "fs": "0.0.1-security",
+        "jest": "^24.9.0",
+        "selenium-webdriver": "^4.0.0-alpha.5"
+    }
+}
