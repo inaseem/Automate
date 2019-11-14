@@ -6,9 +6,7 @@ const chrome = require("selenium-webdriver/chrome");
 
 // Setting Chrome Options For A Test Profile Names Tony I Created For This Experiment
 const options = new chrome.Options();
-options.addArguments(
-    "--user-data-dir=C:/Users/hp/AppData/Local/Google/Chrome/User Data/Profile 1"
-);
+options.addArguments(`--user-data-dir=${creds.data_dir}`);
 const driver = new webdriver.Builder()
     .withCapabilities(webdriver.Capabilities.chrome())
     .setChromeOptions(options)
@@ -74,11 +72,11 @@ let steps = async () => {
             );
             await confirm_button.click();
             console.log(`Approved Members Requests = ${msg.match(/\d+/g)}`);
-            clearTimeout(3000)
+            clearTimeout(3000);
             driver.quit();
         } else {
             console.log("No New Request");
-            clearTimeout(5000)
+            clearTimeout(5000);
             driver.quit();
         }
     } catch (e) {
